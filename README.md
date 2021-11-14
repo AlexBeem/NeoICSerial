@@ -25,6 +25,7 @@ If the Input Capture pin is not available, you may want to consider [NeoHWSerial
 # RX character interrupt
 
 To handle received characters with your procedure, you must register it with the `NeoICSerial` class or your instance:
+
 Чтобы обработать полученные символы с помощью вашей процедуры, вы должны зарегистрировать ее в классе "NeoICSerial" или в своем экземпляре:
 
     #include <NeoICSerial.h>
