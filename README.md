@@ -74,6 +74,7 @@ New methods were added for the user-defined IRS: `attachInterrupt`/`detachInterr
 Были добавлены новые методы для определяемой пользователем IRS:  `attachInterrupt`/`detachInterrupt` и `attachTxCompleteInterrupt`/`detachTxCompleteInterrupt`.
 
 Methods for compatibilty with other software serial libraries were removed:
+
 Методы совместимости с другими последовательными библиотеками программного обеспечения были удалены:
 
 ```
