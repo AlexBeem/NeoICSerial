@@ -18,6 +18,7 @@ This class can only use one predefined Input Capture pin.  Each MCU and board ha
 
 
 If the Input Capture pin is not available, you may want to consider [NeoHWSerial](https://github.com/SlashDevin/NeoHWSerial) or [NeoSWSerial](https://github.com/SlashDevin/NeoSWSerial).
+
 Если pin-код захвата ввода недоступен, вы можете рассмотреть вариант [NeoHWSerial](https://github.com/SlashDevin/NeoHWSerial) или [NeoSWSerial](https://github.com/SlashDevin/NeoSWSerial).
 
 # RX character interrupt
