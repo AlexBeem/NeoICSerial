@@ -80,9 +80,9 @@
 
 
 
-// Arduino Uno, Duemilanove, LilyPad, etc
+// Arduino Uno, NANO, Duemilanove, LilyPad, nano Atmega328PB, etc
 //
-#elif defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__)
+#elif defined(__AVR_ATmega168__) || defined(__AVR_ATmega328P__)  || defined(__AVR_ATmega328PB__)
 
  #define ALTSS_USE_TIMER1
  #define INPUT_CAPTURE_PIN		 8 // receive
