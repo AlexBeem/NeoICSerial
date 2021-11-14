@@ -46,14 +46,17 @@ To handle received characters with your procedure, you must register it with the
     }
 
 The registered procedure will be called from the ISR whenever a character is received.  The received character **will not** be stored in the `rx_buffer`, and it **will not** be returned from `read()`.  Any characters that were received and buffered before `attachInterrupt` was called remain in `rx_buffer`, and could be retrieved by calling `read()`.
+
 Зарегистрированная процедура будет вызываться из ISR всякий раз, когда будет получен символ. Полученный символ **не будет ** сохранен в "rx_buffer`, и он **не будет ** возвращен из "read()`. Любые символы, которые были получены и буферизованы до вызова "attachInterrupt", остаются в "rx_buffer" и могут быть извлечены с помощью вызова "read()`.
 
 If `attachInterrupt` is never called, or it is passed a `NULL` procedure, the normal buffering occurs, and all received characters must be obtained by calling `read()`.
+
 Если "attachInterrupt" никогда не вызывается или передается процедура "NULL", происходит обычная буферизация, и все полученные символы должны быть получены путем вызова "read()`.
 
 # TX complete interrupt
 
 To detect when all characters have been transmitted, you must register it with the `NeoICSerial` class or your instance:
+
 Чтобы определить, когда все символы были переданы, вы должны зарегистрировать их в классе "NeoICSerial" или в вашем экземпляре:
 
 ```
