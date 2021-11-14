@@ -4,6 +4,7 @@ The **NeoICSerial** class is intended as a drop-in replacement for Paul Stoffreg
 Класс NeoICSerial предназначен для замены класса AltSoftSerial Пола Стоффрегена. Это добавляет возможность регистрировать функцию, которая будет вызываться при получении нового символа или при передаче всех символов.
 
 This class can only use one predefined Input Capture pin.  Each MCU and board has a pre-determined pin:
+
 Этот класс может использовать только один предопределенный входной PIN-код захвата. Каждый микроконтроллер и плата имеют заранее определенный вывод:
 <table><tr><td> <b>Board</b> </td><td align=center> <b>Transmit</b> </td><td align=center> <b>Receive</b> </td><td align=center> <b>PWM Unusable</b></td></tr>
 <tr><td> Teensy 3.0 & 3.1 </td><td align=center> 21 </td><td align=center> 20 </td><td align=center> 22</td></tr>
