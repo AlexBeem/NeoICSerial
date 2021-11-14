@@ -31,10 +31,12 @@ This class can only use one predefined Input Capture pin.  Each MCU and board ha
 </table>
 
 If the Input Capture pin is not available, you may want to consider [NeoHWSerial](https://github.com/SlashDevin/NeoHWSerial) or [NeoSWSerial](https://github.com/SlashDevin/NeoSWSerial).
+Если pin-код захвата ввода недоступен, вы можете рассмотреть вариант [NeoHWSerial](https://github.com/SlashDevin/NeoHWSerial) или [NeoSWSerial](https://github.com/SlashDevin/NeoSWSerial).
 
 # RX character interrupt
 
 To handle received characters with your procedure, you must register it with the `NeoICSerial` class or your instance:
+Чтобы обработать полученные символы с помощью вашей процедуры, вы должны зарегистрировать ее в классе "NeoICSerial" или в своем экземпляре:
 
     #include <NeoICSerial.h>
     NeoICSerial serial_port;
@@ -55,12 +57,15 @@ To handle received characters with your procedure, you must register it with the
     }
 
 The registered procedure will be called from the ISR whenever a character is received.  The received character **will not** be stored in the `rx_buffer`, and it **will not** be returned from `read()`.  Any characters that were received and buffered before `attachInterrupt` was called remain in `rx_buffer`, and could be retrieved by calling `read()`.
+Зарегистрированная процедура будет вызываться из ISR всякий раз, когда будет получен символ. Полученный символ **не будет ** сохранен в "rx_buffer`, и он **не будет ** возвращен из "read()`. Любые символы, которые были получены и буферизованы до вызова "attachInterrupt", остаются в "rx_buffer" и могут быть извлечены с помощью вызова "read()`.
 
 If `attachInterrupt` is never called, or it is passed a `NULL` procedure, the normal buffering occurs, and all received characters must be obtained by calling `read()`.
+Если "attachInterrupt" никогда не вызывается или передается процедура "NULL", происходит обычная буферизация, и все полученные символы должны быть получены путем вызова "read()`.
 
 # TX complete interrupt
 
 To detect when all characters have been transmitted, you must register it with the `NeoICSerial` class or your instance:
+Чтобы определить, когда все символы были переданы, вы должны зарегистрировать их в классе "NeoICSerial" или в вашем экземпляре:
 
 ```
   NeoICSerial serial_port;
@@ -70,15 +75,21 @@ To detect when all characters have been transmitted, you must register it with t
 ```
 
 Remember that these registered procedures are called from an interrupt context, and they should return as quickly as possible.  Taking too much time in these procedures will cause many unpredictable behaviors, including loss of received data.  See the similar warnings for the built-in [`attachInterrupt`](https://www.arduino.cc/en/Reference/AttachInterrupt) for digital pins.
+Помните, что эти зарегистрированные процедуры вызываются из контекста прерывания, и они должны возвращаться как можно быстрее. Слишком много времени на эти процедуры приведет ко многим непредсказуемым последствиям, включая потерю полученных данных. Смотрите аналогичные предупреждения для встроенного [`attachInterrupt`](https://www.arduino.cc/en/Reference/AttachInterrupt ) для цифровых контактов.
 
 # Differences from current AltSoftSerial
 
 Support for Arduino IDE v1.0 was removed.
+Поддержка Arduino IDE версии 1.0 была удалена.
 
 New methods were added for the user-defined IRS: `attachInterrupt`/`detachInterrupt` and `attachTxCompleteInterrupt`/`detachTxCompleteInterrupt`.
+Были добавлены новые методы для определяемой пользователем IRS:  `attachInterrupt`/`detachInterrupt` и `attachTxCompleteInterrupt`/`detachTxCompleteInterrupt`.
 
 Methods for compatibilty with other software serial libraries were removed:
+Методы совместимости с другими последовательными библиотеками программного обеспечения были удалены:
+
 ```
 	  // for drop-in compatibility with NewSoftSerial, rxPin & txPin ignored
+	  // для обеспечения совместимости с NewSoftSerial, rxPin и txpin игнорируются
 	  AltSoftSerial(uint8_t rxPin, uint8_t txPin, bool inverse = false) { }
 ```
