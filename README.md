@@ -64,6 +64,7 @@ To detect when all characters have been transmitted, you must register it with t
 ```
 
 Remember that these registered procedures are called from an interrupt context, and they should return as quickly as possible.  Taking too much time in these procedures will cause many unpredictable behaviors, including loss of received data.  See the similar warnings for the built-in [`attachInterrupt`](https://www.arduino.cc/en/Reference/AttachInterrupt) for digital pins.
+
 Помните, что эти зарегистрированные процедуры вызываются из контекста прерывания, и они должны возвращаться как можно быстрее. Слишком много времени на эти процедуры приведет ко многим непредсказуемым последствиям, включая потерю полученных данных. Смотрите аналогичные предупреждения для встроенного [`attachInterrupt`](https://www.arduino.cc/en/Reference/AttachInterrupt ) для цифровых контактов.
 
 # Differences from current AltSoftSerial
