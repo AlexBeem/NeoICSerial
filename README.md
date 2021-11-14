@@ -1,6 +1,9 @@
 #
+The **NeoICSerial** class is intended as a drop-in replacement for Paul Stoffregen's class [AltSoftSerial](https://github.com/PaulStoffregen/AltSoftSerial).  It adds the capability to register a function to be called when a new character is received or when all character have been transmitted.
+
 Класс NeoICSerial предназначен для замены класса AltSoftSerial Пола Стоффрегена. Это добавляет возможность регистрировать функцию, которая будет вызываться при получении нового символа или при передаче всех символов.
 
+This class can only use one predefined Input Capture pin.  Each MCU and board has a pre-determined pin:
 Этот класс может использовать только один предопределенный входной PIN-код захвата. Каждый микроконтроллер и плата имеют заранее определенный вывод:
 <table><tr><td> <b>Board</b> </td><td align=center> <b>Transmit</b> </td><td align=center> <b>Receive</b> </td><td align=center> <b>PWM Unusable</b></td></tr>
 <tr><td> Teensy 3.0 & 3.1 </td><td align=center> 21 </td><td align=center> 20 </td><td align=center> 22</td></tr>
@@ -13,22 +16,6 @@
 <tr><td> Sanguino </td><td align=center> 13 </td><td align=center> 14 </td><td align=center> 12</td></tr>
 </table>
 
-
-
-The **NeoICSerial** class is intended as a drop-in replacement for Paul Stoffregen's class [AltSoftSerial](https://github.com/PaulStoffregen/AltSoftSerial).  It adds the capability to register a function to be called when a new character is received or when all character have been transmitted.
-
-This class can only use one predefined Input Capture pin.  Each MCU and board has a pre-determined pin:
-
-<table><tr><td> <b>Board</b> </td><td align=center> <b>Transmit</b> </td><td align=center> <b>Receive</b> </td><td align=center> <b>PWM Unusable</b></td></tr>
-<tr><td> Teensy 3.0 & 3.1 </td><td align=center> 21 </td><td align=center> 20 </td><td align=center> 22</td></tr>
-<tr><td> Teensy 2.0 </td><td align=center> 9  </td><td align=center> 10 </td><td align=center> (none)</td></tr>
-<tr><td> Teensy++ 2.0 </td><td align=center> 25 </td><td align=center> 4 </td><td align=center> 26, 27</td></tr>
-<tr><td> Arduino Uno </td><td align=center> 9  </td><td align=center> 8 </td><td align=center> 10</td></tr>
-<tr><td> Arduino Leonardo </td><td align=center> 5 </td><td align=center> 13 </td><td align=center> (none)</td></tr>
-<tr><td> Arduino Mega </td><td align=center> 46 </td><td align=center> 48 </td><td align=center> 44, 45</td></tr>
-<tr><td> Wiring-S </td><td align=center> 5 </td><td align=center> 6 </td><td align=center> 4</td></tr>
-<tr><td> Sanguino </td><td align=center> 13 </td><td align=center> 14 </td><td align=center> 12</td></tr>
-</table>
 
 If the Input Capture pin is not available, you may want to consider [NeoHWSerial](https://github.com/SlashDevin/NeoHWSerial) or [NeoSWSerial](https://github.com/SlashDevin/NeoSWSerial).
 Если pin-код захвата ввода недоступен, вы можете рассмотреть вариант [NeoHWSerial](https://github.com/SlashDevin/NeoHWSerial) или [NeoSWSerial](https://github.com/SlashDevin/NeoSWSerial).
