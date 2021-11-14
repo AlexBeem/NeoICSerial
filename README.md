@@ -71,6 +71,7 @@ Support for Arduino IDE v1.0 was removed.
 Поддержка Arduino IDE версии 1.0 была удалена.
 
 New methods were added for the user-defined IRS: `attachInterrupt`/`detachInterrupt` and `attachTxCompleteInterrupt`/`detachTxCompleteInterrupt`.
+
 Были добавлены новые методы для определяемой пользователем IRS:  `attachInterrupt`/`detachInterrupt` и `attachTxCompleteInterrupt`/`detachTxCompleteInterrupt`.
 
 Methods for compatibilty with other software serial libraries were removed:
