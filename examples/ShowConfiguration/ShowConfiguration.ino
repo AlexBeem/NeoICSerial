@@ -82,7 +82,7 @@ void printNeoICSerialSetup(Stream &port)
 void setup()
 {
   // Open default serial to dump config to
-  Serial.begin(9600);
+  Serial.begin(115200);
   while (!Serial) ; // wait for serial monitor
  printNeoICSerialSetup(Serial);
 }
