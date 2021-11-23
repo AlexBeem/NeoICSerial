@@ -12,9 +12,9 @@
 
 // This example code is in the public domain.
 
-#include <config/AltSoftSerial_Boards.h>
+#include <config/NeoICSerial_Boards.h>
 
-void printAltSoftSerialSetup(Stream &port)
+void printNeoICSerialSetup(Stream &port)
 {
   #define PRINT_PFX "NeoICSerial:"
   #define PRINT_PIN_NAME(pin,name) { char buffer[128+1]; sprintf(buffer, PRINT_PFX "PIN:%2d %s", (int)pin, (const char*)name); port.println(buffer); }
@@ -84,7 +84,7 @@ void setup()
   // Open default serial to dump config to
   Serial.begin(9600);
   while (!Serial) ; // wait for serial monitor
-  printAltSoftSerialSetup(Serial);
+ printNeoICSerialSetup(Serial);
 }
 
 void loop()
@@ -92,5 +92,5 @@ void loop()
   // Repeat every 10 sec (just in case)
   delay(10000);
   Serial.println("");
-  printAltSoftSerialSetup(Serial);
+  printNeoICSerialSetup(Serial);
 }
